@@ -10,11 +10,10 @@ const projectImages = document.querySelectorAll(".project-content .img");
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
-    rect.left >= 0 &&
-    rect.right <= (projectImages.clientWidth || document.documentElement.clientWidth)
+    rect.top >= 0 &&
+    rect.top <= (window.clientWidth || document.documentElement.clientWidth)
   );
 }
-
 
 
 // document.querySelector(".arrow-left").addEventListener("click", () => {
@@ -148,3 +147,32 @@ function isInViewport(element) {
 // }, {passive: false})
 
 
+// document.addEventListener('scroll', () => {
+//   const activeSection = document.activeElement
+//   console.log(activeSection, event.target)
+// })
+
+// select nav at the top
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect()
+    if (rect.top >= 0 && rect.top < window.innerHeight * 0.5) {
+      const className =Array.from(section.classList)[0].split('-')[0]
+
+      const selectNav = document.querySelector("nav ul")
+
+      selectNav.querySelector('.' + className).classList.add('active')
+
+      selectNav.querySelectorAll('li').forEach(navList => {
+        if (!navList.classList.contains(className)) {
+
+          navList.classList.remove('active')
+        }
+      })
+
+
+
+    }
+  })
+})
