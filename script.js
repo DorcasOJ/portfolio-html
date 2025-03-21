@@ -1,3 +1,5 @@
+import inputs from "./utils/inputs.js";
+
 document.querySelector(".scroll-to-project").addEventListener("click", () => {
   window.scrollBy({
     top: window.scrollY + window.innerHeight * 0.9,
@@ -202,4 +204,56 @@ document.querySelector('.drop-down-list').addEventListener('click', (event) => {
   document.querySelector('.menu-close').style.display = "none";
   document.querySelector('.drop-down-nav').style.display = 'none';
     
+})
+
+// console.log(inputs.blogs)
+const blogs = document.querySelector(".blog-content .img-div")
+const projects = document.querySelector(".project-content .img-div")
+
+function createImgBox(blog, _type, blogs) {
+  let img_type
+  _type === "blog" ? img_type="blog_img" : img_type="proj_img" 
+  const divBox = document.createElement('div')
+  divBox.classList.add("img-box", img_type)
+  const divImg = document.createElement('div')
+  divImg.className = "img"
+  const bgUrl =  `url('${blog['image_url']}')`
+  divImg.style.backgroundImage = bgUrl
+
+  divBox.appendChild(divImg)
+  const divImgText = document.createElement('div')
+  divImgText.className = "img-text"
+  const divImgTitle = document.createElement('div')
+  divImgTitle.className = "img-title"
+  divImgTitle.innerHTML = blog["image_title"]
+  divImgText.appendChild(divImgTitle)
+  const divImgDescription = document.createElement('div')
+  divImgDescription.className="img-description"
+  divImgDescription.innerHTML = blog["image_description"]
+  divImgText.appendChild(divImgDescription)
+  const divImgLink = document.createElement('div')
+  divImgLink.className = "img-link"
+  const a = document.createElement('a')
+  a.href=blog['image_link']
+  a.innerHTML = 'View Live'
+  divImgLink.appendChild(a)
+  divImgText.appendChild(divImgLink)
+  const blurBg = document.createElement('div')
+  blurBg.className = "blur-bg"
+  divBox.appendChild(divImgText)
+  divBox.appendChild(blurBg)
+  blogs.appendChild(divBox)
+
+  console.log(getComputedStyle(divImg).backgroundImage,
+    `--url('${blog['image_url']}');`
+ )
+}
+
+inputs.blogs.forEach(blog => {
+  createImgBox(blog, 'blog', blogs)
+})
+
+
+inputs.projects.forEach(project => {
+  createImgBox(project, 'project', projects)
 })

@@ -353,12 +353,13 @@ button:hover a {
 .img-box .img-title {
     font-size: 2rem;
     font-weight: 500;
+    text-align: right;
 }
 
 .img-box .img-description {
     font-size: 14px;
     font-style: italic;
-    /* text-align: center; */
+    /* text-align: right; */
 }
 
 .img-box .img-link {
@@ -388,7 +389,7 @@ button:hover a {
 
 }
 
-.blog_img_1 .img {
+/* .blog_img_1 .img {
     background-image: url('./images/nestjs-blog.jpg');
 }
 
@@ -399,7 +400,7 @@ button:hover a {
 
 .blog_img_3 .img {
     background-image: url('./images/command-line-blog.jpg');
-}
+} */
 
 .contact-content {
     padding: 2rem 0;
@@ -619,25 +620,7 @@ button:hover a {
 
     .home-container .home-right-content .iam p {
         text-align: center;
-        /* margin-bottom: 2rem; */
     }
-
-    /* .project-content .arrow-box:hover .arrow-left,
-    .project-content .arrow-box:hover .arrow-right,
-    .blog-content .arrow-box:hover .arrow-left, 
-    .blog-content .arrow-box:hover .arrow-right {
-    border: none;
-    }
-
-.project-content .arrow-box, .blog-content .arrow-box {
-    width: 10%;
-}
-
-.project-content .arrow-left, .project-content .arrow-right,
-.blog-content .arrow-left, .blog-content .arrow-right {
-    width: 25px;
-    height: 25px;
-} */
 
     .contact-content .contact-left-content {
         display: none;
@@ -663,6 +646,33 @@ button:hover a {
         min-width: 18rem;
         height: 70%;
     }
+
+    /* .project-content .img-div .img-text .img-title,
+    .blog-content .img-div .img-text .img-title {
+        font-size: 1rem;
+    } */
+
+    
+    .img-box .img-text {
+        bottom: 1.5rem;
+    }
+    
+    .img-box .img-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding-bottom: 1rem;
+    }
+    
+    .img-box .img-description {
+        font-size: 12px;
+        font-style: italic;
+        /* text-align: center; */
+    }
+    
+    .img-box .img-link {
+        font-size: 10px;
+    }
+
 
     .contact-content .contact-form div:nth-child(1) {
         position: absolute;
