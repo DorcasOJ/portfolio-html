@@ -243,10 +243,6 @@ function createImgBox(blog, _type, blogs) {
   divBox.appendChild(divImgText)
   divBox.appendChild(blurBg)
   blogs.appendChild(divBox)
-
-  console.log(getComputedStyle(divImg).backgroundImage,
-    `--url('${blog['image_url']}');`
- )
 }
 
 inputs.blogs.forEach(blog => {
@@ -257,3 +253,19 @@ inputs.blogs.forEach(blog => {
 inputs.projects.forEach(project => {
   createImgBox(project, 'project', projects)
 })
+
+// send email
+document.querySelector(".contact-content form button").addEventListener('click', () => {
+  const contactForm = document.querySelector(".contact-content form")
+  const senderName = contactForm.querySelector('input[name="name"]')
+  const senderPhone = contactForm.querySelector('input[name="tel"]')
+  const senderEmail = contactForm.querySelector('input[name="email"]')
+  const senderMessage = contactForm.querySelector('input[name="message"]')
+
+  let link = `mailto:ayanfedorcasolajide@gmail.com?subject=Contacting From Portfolio&body=Hi\n My name is${senderName} \n${senderMessage}\nYou can contact me via email on ${senderEmail} and telephone ${senderPhone}`
+  console.log(link);
+  window.location.href = link
+
+})
+
+
