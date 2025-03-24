@@ -16,11 +16,13 @@ body {
     margin: auto;
     max-width: 1100px;
     position: relative;
-    font-family: "Playwrite HU", cursive;
+    /* font-family: "Playwrite HU", cursive; */
+    font-family: "Cabin", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    /* background: #121212  ; */
+    font-variation-settings:
+    "wdth" 100;
     color: #EAEAEA;
     /* background: transparent; */
 }
@@ -49,6 +51,11 @@ body {
     font-size: 8px;
     cursor: pointer;
     margin: 8px 0;
+}
+
+.container nav .left a {
+    width: 100%;
+    height: 100%;
 }
 
 .container nav .left .logo {
@@ -227,6 +234,7 @@ nav .right .menu-icon:hover i {
 .home-container .home-right-content .iam span {
     word-spacing: 5px;
     letter-spacing: 2px;
+
 }
 
 .home-container .home-right-content .iam div span:nth-child(1) {
@@ -245,6 +253,7 @@ nav .right .menu-icon:hover i {
 
 .home-container .home-right-content .iam p {
     font-size: 13px;
+    line-height: 1.2rem;
 }
 
 button {
@@ -304,7 +313,8 @@ button:hover a {
 }
 
 .project-content .title,
-.blog-content .title {
+.blog-content .title,
+.experience-content .title {
     font-size: 2.5rem;
     align-self: flex-start;
     color: #fff;
@@ -380,11 +390,12 @@ button:hover a {
 .img-box .img-description {
     font-size: 14px;
     font-style: italic;
+    padding: 1rem;
     /* text-align: right; */
 }
 
 .img-box .img-link {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .img-box .img-link a {
@@ -520,6 +531,9 @@ button:hover a {
     box-shadow: 1px 1px 1px #ccc;
 }
 
+.experience-content {
+    padding: 2rem 0;
+}
 
 @media screen and (min-width: 901px) and (max-width: 1100px) {
     .container {

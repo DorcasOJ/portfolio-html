@@ -257,10 +257,10 @@ inputs.projects.forEach(project => {
 // send email
 document.querySelector(".contact-content form button").addEventListener('click', () => {
   const contactForm = document.querySelector(".contact-content form")
-  const senderName = contactForm.querySelector('input[name="name"]')
-  const senderPhone = contactForm.querySelector('input[name="tel"]')
-  const senderEmail = contactForm.querySelector('input[name="email"]')
-  const senderMessage = contactForm.querySelector('input[name="message"]')
+  const senderName = contactForm.querySelector('input[name="name"]').value
+  const senderPhone = contactForm.querySelector('input[name="tel"]').value
+  const senderEmail = contactForm.querySelector('input[name="email"]').value
+  const senderMessage = contactForm.querySelector('input[name="message"]').value
 
   let link = `mailto:ayanfedorcasolajide@gmail.com?subject=Contacting From Portfolio&body=Hi\n My name is${senderName} \n${senderMessage}\nYou can contact me via email on ${senderEmail} and telephone ${senderPhone}`
   console.log(link);
