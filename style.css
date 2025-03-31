@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     justify-content: start;
     margin: auto;
-    max-width: 1100px;
+    max-width: 1320px;
     position: relative;
     /* font-family: "Playwrite HU", cursive; */
     font-family: "Cabin", sans-serif;
@@ -314,7 +314,7 @@ button:hover a {
 
 .project-content .title,
 .blog-content .title,
-.experience-content .title {
+.experiences-content .title {
     font-size: 2.5rem;
     align-self: flex-start;
     color: #fff;
@@ -341,7 +341,7 @@ button:hover a {
 }
 
 .img-div .img-box {
-    min-width: 25rem;
+    min-width: 35rem;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -421,6 +421,212 @@ button:hover a {
 
 }
 
+.experiences-content {
+    /* margin-bottom:  */
+    flex-direction: column;
+    margin-bottom: 4rem;
+    /* border: solid 1px; */
+}
+
+.experiences-content > .boxes{
+    padding: 5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.experiences-content > .boxes .zummit {
+    width: 15rem;
+    position: relative;
+    cursor: pointer;
+    /* border: 1px solid; */
+}
+
+.experiences-content .boxes .zummit:hover img,
+.experiences-content .boxes .wids:hover img, 
+.experiences-content .boxes .globus:hover img, 
+.experiences-content .boxes .utiva:hover img, 
+.experiences-content .boxes .cc-hub:hover img {
+    filter: opacity(30%) invert(100%);
+    
+}
+
+.experiences-content .boxes .zummit:hover .text,
+.experiences-content .boxes .wids:hover .text, 
+.experiences-content .boxes .globus:hover .text, 
+.experiences-content .boxes .utiva:hover .text, 
+.experiences-content .boxes .cc-hub:hover .text {
+   display: block;
+    
+}
+
+.experiences-content .boxes .wids img, 
+.experiences-content .boxes .globus img, 
+.experiences-content .boxes .utiva img, 
+.experiences-content .boxes .cc-hub img, 
+    .experiences-content .boxes .zummit img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: filter .6s ease-in-out;
+}
+
+
+.experiences-content .boxes .zummit .text
+ {
+    display: none;
+    position: absolute;
+    top: 28%;
+    left: 3%;
+    color: #fff;
+    text-align: center;
+}
+
+.experiences-content .boxes .zummit .text span,
+.experiences-content .boxes .wids .text span
+{
+    font-size: 1.5rem;
+    font-weight: bolder;
+
+}
+
+.experiences-content .boxes .zummit .text p {
+    font-size: .8rem;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    font-weight: 500;
+    padding: 4rem 1rem;
+    text-transform: uppercase;
+}
+
+.experiences-content > .boxes .wids {
+    width: 15rem;
+    position: relative;
+    cursor: pointer;
+    /* border: 1px solid; */
+}
+
+.experiences-content .boxes .wids .text
+ {
+    display: none;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    color: #fff;
+    text-align: center;
+}
+
+.experiences-content .boxes .wids .text p {
+    font-size: .7rem;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    font-weight: 500;
+    padding: 2rem 1rem;
+    text-transform: uppercase;
+}
+
+.experiences-content > .boxes .globus {
+    width: 13rem;
+    position: relative;
+    cursor: pointer;
+    /* border: 1px solid; */
+}
+
+.experiences-content .boxes .globus .text
+ {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    color: #fff;
+    text-align: center;
+}
+
+.experiences-content .boxes .globus .text span,
+.experiences-content .boxes .utiva .text span
+{
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.experiences-content .boxes .globus .text p {
+    font-size: .8rem;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    font-weight: 500;
+    padding: 4rem 1rem;
+    text-transform: uppercase;
+}
+
+
+
+.experiences-content > .boxes .utiva {
+    width: 15rem;
+    position: relative;
+    cursor: pointer;
+    /* border: 1px solid; */
+}
+
+.experiences-content .boxes .utiva .text
+ {
+    display: none;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    color: #fff;
+    text-align: center;
+}
+
+.experiences-content .boxes .utiva .text p {
+    font-size: .7rem;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    font-weight: 500;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+
+
+.experiences-content > .boxes .cc-hub {
+    width: 15rem;
+    position: relative;
+    cursor: pointer;
+    /* border: 1px solid; */
+}
+
+.experiences-content .boxes .cc-hub .text
+ {
+    display: none;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    color: #fff;
+    text-align: center;
+}
+
+.experiences-content .boxes .cc-hub .text span
+{
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+.experiences-content .boxes .cc-hub .text p {
+    font-size: .5rem;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    font-weight: 500;
+    padding: .2rem ;
+    text-transform: uppercase;
+}
+
+
 /* .blog_img_1 .img {
     background-image: url('./images/nestjs-blog.jpg');
 }
@@ -445,7 +651,7 @@ button:hover a {
 }
 
 .contact-content .contact-left-content {
-    width: 30%;
+    width: 15%;
     /* height: 100%; */
     display: flex;
     flex-direction: column;
@@ -474,7 +680,7 @@ button:hover a {
 
 .contact-content .contact-right-content {
     height: 100%;
-    width: 70%;
+    width: 85%;
     padding: 0 2.5rem;
     /* position: relative; */
 
@@ -483,8 +689,8 @@ button:hover a {
 .contact-content .contact-form div:nth-child(1) {
     position: absolute;
     left: 50%;
-    top: 13px;
-    font-size: 1.6rem;
+    top: 10px;
+    font-size: 2rem;
     /* color: #e4e0e0; */
     color: #dcd6cd;
 }
@@ -504,34 +710,35 @@ button:hover a {
     outline: 0;
     background: transparent;
     border-bottom: 1px solid #fff;
-    padding: 10px 0;
-    font-size: 14px;
+    padding: 18px 0;
+    font-size: 1rem;
     color: #fff;
     /* width: 100%; */
 }
 
 .contact-content form input::placeholder {
     color: #fff;
+    
 }
 
 .contact-content form button {
     border: 1px solid #fff;
     background: transparent;
     align-self: center;
-    font-size: 14px;
+    font-size: 1rem;
     color: #fff;
 }
 
 .contact-content form button:hover {
     background-color: #fff;
     color: #d48105;
-    font-size: 14px;
+    font-size: 1.2rem;
     letter-spacing: 3px;
     /* transform: scale(1, 1); */
     box-shadow: 1px 1px 1px #ccc;
 }
 
-.experience-content {
+.experiences-content {
     padding: 2rem 0;
 }
 
@@ -790,11 +997,24 @@ button:hover a {
 .home-content,
 .project-content,
 .blog-content,
+.experiences-content,
 .contact-content {
-    height: 90vh;
+    height: 70vh;
     min-height: 35rem;
     overflow-y: auto;
     display: flex;
+    align-items: center;
+    /* background: #181818  ; */
+    position: relative;
+}
+
+.home-content,
+.experiences-content,
+.contact-content {
+    height: 90vh;
+    min-height: 35rem;
+    display: flex;
+    overflow-y: hidden;
     align-items: center;
     /* background: #181818  ; */
     position: relative;
