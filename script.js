@@ -1,5 +1,18 @@
 import inputs from "./utils/inputs.js";
 
+const HTMLbody = document.body;
+const themeToggle = document.querySelector(".theme-toggle");
+
+themeToggle.addEventListener('click', () => {
+ HTMLbody.classList.toggle('white-theme')
+ if (HTMLbody.classList.contains('white-theme')) {
+  themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+
+ } else {
+  themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>'
+ }
+})
+
 document.querySelector(".scroll-to-project").addEventListener("click", () => {
   window.scrollBy({
     top: window.scrollY + window.innerHeight * 0.9,
@@ -162,7 +175,6 @@ window.addEventListener('scroll', () => {
     const rect = section.getBoundingClientRect()
     if (rect.top >= 0 && rect.top < window.innerHeight * 0.5) {
       const className =Array.from(section.classList)[0].split('-')[0]
-     console.log(className)
         const selectNav = document.querySelector("nav ul.nav-top")
 
         selectNav.querySelector('.' + className).classList.add('active')
