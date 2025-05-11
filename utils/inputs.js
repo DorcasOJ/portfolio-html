@@ -26,14 +26,6 @@ const inputs = {
       image_link:
         "https://medium.com/dev-genius/setting-up-nestjs-with-postgresql-ac2cce9045fe",
     },
-    {
-      image_url: "https://i.postimg.cc/m2LmbcpF/nestjs-blog.jpg",
-      image_title: "Setting up Nestjs with PostgreSQL",
-      image_description:
-        "NestJS is a framework used to create server-side NodeJS applications. I recently started working with NestJs and...",
-      image_link:
-        "https://medium.com/dev-genius/setting-up-nestjs-with-postgresql-ac2cce9045fe",
-    },
   ],
 
   projects: [
@@ -42,14 +34,17 @@ const inputs = {
         "https://i.postimg.cc/0zjbXC3Y/Screenshot-2025-04-29-100131.png",
       image_title: "Netflix App",
       image_description:
-        "View, search and watch your favorite Netflix movie trailers",
+        "View, search and watch your favorite Netflix movie trailers. Made with ReactJS and firebase",
       image_link: "https://netflix-clone-e75b8.web.app/",
+      github_link: "https://github.com/DorcasOJ/netflix-react",
     },
     {
       image_url: "https://i.postimg.cc/D8HSJCX6/sample-to-do.png",
       image_title: "To Do App",
-      image_description: "To create and track daily Tasks",
+      image_description:
+        "To create and track daily Tasks. Made with JavaScript, HTML and CSS",
       image_link: "https://dorcaz-todo.netlify.app/",
+      github_link: "https://github.com/DorcasOJ/to-do-app-html",
     },
   ],
 };
