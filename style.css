@@ -14,9 +14,7 @@
 }
 
 
-.white-theme {
- 
-}
+.white-theme {}
 
 .theme-toggle {
     font-size: 16px;
@@ -79,8 +77,8 @@ body {
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
-    /* "wdth" 100; */
-    /* background: transparent; */
+        /* "wdth" 100; */
+        /* background: transparent; */
 }
 
 body nav {
@@ -111,7 +109,7 @@ body.white-theme nav {
 }
 
 .container nav .left {
-    width:45px;
+    width: 45px;
     height: 60px;
     display: flex;
     flex-direction: column;
@@ -132,7 +130,7 @@ body nav .left .logo {
     height: 100%;
     border: 1px solid;
     background-image: url('./images/dorcas-oj-logo-1.png');
-    background-position: center top ;
+    background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
     /* border: 1px solid #000; */
@@ -270,7 +268,7 @@ body .drop-down-nav .drop-down-list li a {
     color: var(--text-color);
 }
 
-body.white-theme .drop-down-nav .drop-down-list li a  {
+body.white-theme .drop-down-nav .drop-down-list li a {
     color: var(--white-text-color);
 }
 
@@ -304,13 +302,14 @@ body.white-theme .drop-down-nav .drop-down-list li a  {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 23rem;
     overflow: hidden;
     border-radius: 10px;
 }
 
 .home-content .home-left-content img {
-    width: 100%;
+    object-fit: contain;
+    /* width: 100%; */
     z-index: 2;
     border-radius: 10px;
     transition: transform .5s ease;
@@ -336,6 +335,8 @@ body.white-theme .drop-down-nav .drop-down-list li a  {
 .home-content .home-right-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    flex: 1;
     padding-left: 15px;
 }
 
@@ -349,26 +350,33 @@ body.white-theme .drop-down-nav .drop-down-list li a  {
 .home-container .home-right-content .iam span {
     word-spacing: 5px;
     letter-spacing: 2px;
-
 }
 
 .home-container .home-right-content .iam div span:nth-child(1) {
-    font-size: 16px;
+    font-size: 12px;
+    padding-bottom: .6rem;
+
 }
 
 .home-container .home-right-content .iam div span:nth-child(2) {
-    font-size: 50px;
+    font-size: 25px;
+    padding-bottom: .6rem;
+
 }
 
 .home-container .home-right-content .iam div span:nth-child(3) {
-    font-size: 18px;
+    font-size: 40px;
     width: 70%;
-    align-self: self-end;
+    /* align-self: self-end; */
 }
 
 .home-container .home-right-content .iam p {
     font-size: 13px;
     line-height: 1.2rem;
+    padding-bottom: 20px;
+    padding-right: 20%;
+    word-spacing: 5px;
+    letter-spacing: 2px;
 }
 
 button {
@@ -381,7 +389,7 @@ button {
     cursor: pointer;
     border-radius: 15px;
     align-self: self-start;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
 }
 
 button a {
@@ -514,7 +522,7 @@ body .img-div {
 }
 
 body.white-theme .img-box .img-text {
-   color: var(--text-color);
+    color: var(--text-color);
 }
 
 .img-box .img-title {
@@ -533,13 +541,21 @@ body.white-theme .img-box .img-text {
     font-size: 14px;
 }
 
+.img-box .img-link .github-p {
+    display: block;
+    padding: 10px 0;
+}
+
 .img-box .img-link a {
+    display: block;
+    padding: 5px;
+    text-align: center;
     color: #fff;
 }
 
-.img-box .img-link:hover a {
+.img-box .img-link a:hover {
     text-decoration: underline;
-    color: #4a2e03;
+    background-color: #814f05;
     /* color: #d48105; */
     font-weight: bold;
 }
@@ -559,10 +575,11 @@ body.white-theme .img-box .img-text {
 .experiences-content {
     flex-direction: column;
     margin-bottom: 4rem;
+    overflow-x: hidden;
     /* border: solid 1px; */
 }
 
-.experiences-content > .boxes{
+.experiences-content>.boxes {
     padding: 5rem 1rem;
     display: flex;
     align-items: center;
@@ -590,7 +607,7 @@ body.white-theme .img-box .img-text {
 
 body .experiences-content .boxes .box:hover img {
     filter: opacity(30%) invert(100%);
-    
+
 }
 
 body.white-theme .experiences-content .boxes .box:hover img {
@@ -600,12 +617,12 @@ body.white-theme .experiences-content .boxes .box:hover img {
 body .experiences-content .boxes .box:hover .text {
     color: var(--text-color);
     font-weight: 500;
- }
- 
+}
+
 
 body.white-theme .experiences-content .boxes .box:hover .text {
-   color: var(--white-text-color);
-   font-weight: 500;
+    color: var(--white-text-color);
+    font-weight: 500;
 }
 
 .experiences-content .boxes .box:hover .text {
@@ -615,7 +632,7 @@ body.white-theme .experiences-content .boxes .box:hover .text {
 
 .experiences-content .boxes .box .text {
     display: none;
-   
+
     text-align: center;
     color: grey;
 }
@@ -642,213 +659,6 @@ body.white-theme .experiences-content .boxes .box:hover .text {
     left: 0%;
 }
 
-
-/*
-.experiences-content > .boxes .zummit,
-.experiences-content > .boxes .globus,
-.experiences-content > .boxes .cc-hub,
-.experiences-content > .boxes .utiva,
-.experiences-content > .boxes .wids {
-    height: 11.5rem;
-    width: 11.5rem;
-
-    position: relative;
-    cursor: pointer;
-    border: 1px solid;
-}
-
-.experiences-content .boxes .zummit:hover img,
-.experiences-content .boxes .wids:hover img, 
-.experiences-content .boxes .globus:hover img, 
-.experiences-content .boxes .utiva:hover img, 
-.experiences-content .boxes .cc-hub:hover img {
-    filter: opacity(30%) invert(100%);
-    
-}
-
-body.white-theme .experiences-content .boxes .zummit:hover img,
-body.white-theme .experiences-content .boxes .wids:hover img, 
-body.white-theme .experiences-content .boxes .globus:hover img, 
-body.white-theme .experiences-content .boxes .utiva:hover img, 
-body.white-theme .experiences-content .boxes .cc-hub:hover img {
-    filter: opacity(30%) blur(1px);
-    
-}
-
-.experiences-content .boxes .zummit:hover .text,
-.experiences-content .boxes .wids:hover .text, 
-.experiences-content .boxes .globus:hover .text, 
-.experiences-content .boxes .utiva:hover .text, 
-.experiences-content .boxes .cc-hub:hover .text {
-   display: block;
-    
-}
-
-.experiences-content .boxes .wids img, 
-.experiences-content .boxes .globus img, 
-.experiences-content .boxes .utiva img, 
-.experiences-content .boxes .cc-hub img, 
-    .experiences-content .boxes .zummit img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    transition: filter .5s ease-in-out;
-}
-
-
-.experiences-content .boxes .zummit .text
- {
-    display: none;
-    position: absolute;
-    top: 28%;
-    left: 3%;
-    text-align: center;
-}
-
-.experiences-content .boxes .zummit .text span,
-.experiences-content .boxes .wids .text span
-{
-    font-size: 1.5rem;
-    font-weight: bolder;
-
-}
-
-.experiences-content .boxes .zummit .text p {
-    font-size: .8rem;
-    letter-spacing: 2px;
-    word-spacing: 5px;
-    font-weight: 500;
-    padding: 4rem 1rem;
-    text-transform: uppercase;
-}
-
-
-.experiences-content .boxes .wids .text
- {
-    display: none;
-    position: absolute;
-    top: 3%;
-    left: 3%;
-    text-align: center;
-}
-
-.experiences-content .boxes .wids .text p {
-    font-size: .7rem;
-    letter-spacing: 2px;
-    word-spacing: 5px;
-    font-weight: 500;
-    padding: 2rem 1rem;
-    text-transform: uppercase;
-}
-
-.experiences-content > .boxes .globus {
-    width: 13rem;
-    position: relative;
-    cursor: pointer;
-    border: 1px solid; 
-}
-
-.experiences-content .boxes .globus .text
- {
-    display: none;
-    position: absolute;
-    top: 5%;
-    left: 2%;
-    text-align: center;
-}
-
-.experiences-content .boxes .globus .text span,
-.experiences-content .boxes .utiva .text span
-{
-    font-size: 1.2rem;
-    font-weight: bold;
-
-}
-
-.experiences-content .boxes .globus .text p {
-    font-size: .8rem;
-    letter-spacing: 2px;
-    word-spacing: 5px;
-    font-weight: 500;
-    padding: 4rem 1rem;
-    text-transform: uppercase;
-}
-
-
-
-.experiences-content > .boxes .utiva {
-    width: 15rem;
-    position: relative;
-    cursor: pointer;
-    border: 1px solid;
-}
-
-.experiences-content .boxes .utiva .text
- {
-    display: none;
-    position: absolute;
-    top: 2%;
-    left: 1%;
-    text-align: center;
-}
-
-.experiences-content .boxes .utiva .text p {
-    font-size: .7rem;
-    letter-spacing: 2px;
-    word-spacing: 5px;
-    font-weight: 500;
-    padding: 1rem;
-    text-transform: uppercase;
-}
-
-
-
-.experiences-content > .boxes .cc-hub {
-    width: 15rem;
-    position: relative;
-    cursor: pointer;
-}
-
-.experiences-content .boxes .cc-hub .text
- {
-    display: none;
-    position: absolute;
-    top: 2%;
-    left: 1%;
-    text-align: center;
-}
-
-.experiences-content .boxes .cc-hub .text span
-{
-    font-size: 1rem;
-    font-weight: bold;
-
-}
-
-.experiences-content .boxes .cc-hub .text p {
-    font-size: .5rem;
-    letter-spacing: 2px;
-    word-spacing: 5px;
-    font-weight: 500;
-    padding: .2rem ;
-    text-transform: uppercase;
-}
-
-
-/* .blog_img_1 .img {
-    background-image: url('./images/nestjs-blog.jpg');
-}
-
-.blog_img_2 .img {
-    background-image: url('./images/python-intro-blog.jpg');
-}
-
-
-.blog_img_3 .img {
-    background-image: url('./images/command-line-blog.jpg');
-} */
-
 .contact-content {
     padding: 2rem 0;
     display: flex;
@@ -873,22 +683,26 @@ body.white-theme .experiences-content .boxes .cc-hub:hover img {
 }
 
 .contact-content .round {
-    width: 10rem;
-    height: 8rem;
+
+    border-radius: 50%;
+    width: 9rem;
+    height: 10rem;
+    overflow: hidden;
 }
 
 .contact-content .round img {
+
+    height: 100%;
     width: 100%;
-    border-radius: 35px;
 
 }
 
 .contact-content .contact-left-content .contact-link {
-    font-size: 11px;
+    font-size: 14px;
     transition: transform .3s ease-in-out;
 }
 
-.contact-content .contact-left-content .contact-link i{
+.contact-content .contact-left-content .contact-link i {
     padding-right: 3px;
 }
 
@@ -896,7 +710,7 @@ body.white-theme .experiences-content .boxes .cc-hub:hover img {
     transform: scale(1.1);
 }
 
-.contact-content .contact-left-content .contact-link:hover a{
+.contact-content .contact-left-content .contact-link:hover a {
     color: #d48105;
 }
 
@@ -913,7 +727,7 @@ body.white-theme .experiences-content .boxes .cc-hub:hover img {
     left: 50%;
     top: 10px;
     font-size: 2rem;
-} 
+}
 
 body .contact-content .contact-form div:nth-child(1) {
     color: var(--white-background-color);
@@ -947,7 +761,7 @@ body.white-theme .contact-content .contact-form div:nth-child(1) {
 
 .contact-content form input::placeholder {
     color: #fff;
-    
+
 }
 
 .contact-content form button {
@@ -996,6 +810,12 @@ body.white-theme .contact-content .contact-form div:nth-child(1) {
         height: calc(65vh - 35%);
     }
 
+    .home-container .home-right-content .iam p {
+
+        padding: 0 60px 30px 60px;
+    }
+
+
 
 }
 
@@ -1035,36 +855,8 @@ body.white-theme .contact-content .contact-form div:nth-child(1) {
         margin-top: 2rem;
     }
 
-    .home-content .home-left-content {
-        height: 60%;
-        width: 40%;
-        background: url("./images/dorcas-image.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 5px;
-    }
-
-    .home-content .home-left-content img {
-        display: none;
-    }
-
     .home-content .home-right-content button {
         align-self: center;
-    }
-
-    .home-content .home-left-content {
-        height: 60%;
-        width: 40%;
-        background: url("./images/dorcas-image.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 5px;
-    }
-
-    .home-content .home-left-content img {
-        display: none;
     }
 
     .home-content .home-right-content button {
@@ -1131,12 +923,25 @@ body.white-theme .contact-content .contact-form div:nth-child(1) {
         top: 0%;
         font-size: 2rem;
         /* color: #e4e0e0; */
-    } 
-    
+    }
+
 }
 
 
 @media screen and (min-width: 0px) and (max-width: 800px) {
+
+    .home-content .home-left-content {
+        border-radius: 50%;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .home-content .home-left-content img {
+        width: 100%;
+        z-index: 2;
+        border-radius: 10px;
+        transition: transform .5s ease;
+    }
 
     nav .right .menu-icon {
         display: block;
@@ -1146,9 +951,10 @@ body.white-theme .contact-content .contact-form div:nth-child(1) {
         display: none;
     }
 
-    .project-content {
-        /* margin-bottom: 2rem; */
+    .home-container .home-right-content .iam p {
+        padding: 0 30px 20px 30px;
     }
+
 
     .project-content .img-div,
     .blog-content .img-div {
@@ -1162,23 +968,23 @@ body.white-theme .contact-content .contact-form div:nth-child(1) {
         min-width: 18rem;
         height: 70%;
     }
-    
+
     .img-box .img-text {
         bottom: 1.5rem;
     }
-    
+
     .img-box .img-title {
         font-size: 1.1rem;
         font-weight: 500;
         padding-bottom: 1rem;
     }
-    
+
     .img-box .img-description {
         font-size: 12px;
         font-style: italic;
         /* text-align: center; */
     }
-    
+
     .img-box .img-link {
         font-size: 10px;
     }
@@ -1227,6 +1033,14 @@ body.white-theme .contact-content .contact-form div:nth-child(1) {
 
     .container nav .right ul {
         display: none;
+    }
+
+
+    .home-content .home-left-content {
+
+        border-radius: 50%;
+        width: 15rem;
+        height: 15rem;
     }
 
     .home-container .home-box-design {
@@ -1295,6 +1109,5 @@ body.white-theme .contact-content .contact-form div:nth-child(1) {
     display: flex;
     align-items: center;
     /* background: #181818  ; */
-    position: relative; 
+    position: relative;
 }
-
